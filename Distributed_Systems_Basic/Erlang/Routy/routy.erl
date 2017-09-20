@@ -1,6 +1,6 @@
 -module(routy).
 -author("chara").
--export([start/2, stop/1, init/1]).
+-export([start/2, stop/1, init/1, router/6]).
 
 start(Reg, Name) ->
   register(Reg, spawn(fun() -> init(Name) end)).
