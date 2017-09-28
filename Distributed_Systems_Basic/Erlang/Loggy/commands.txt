@@ -1,0 +1,7 @@
+erl
+c(logger).
+c(worker).
+c(test).
+c(time).
+test:run(2000, 100).
+test:run(2000, 0).
