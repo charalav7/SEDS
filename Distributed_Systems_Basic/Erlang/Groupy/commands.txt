@@ -1,0 +1,25 @@
+erl
+cd("C:/Users/chara/Box Sync/KTH_Software/Distributed Systems_ Basic/erlang/MyHomeWork/HW4_Groupy").
+c(gms1).
+c(worker).
+c(test).
+c(gui).
+
+%%W1 = test:first(1, gms1, 1000).
+%%test:add(2, gms1, W1, 1000).
+%%test:add(3, gms1, W1, 1000).
+
+test:more(5, gms1, 1000).
+
+c(gms2).
+test:more(5, gms2, 1000).
+
+c(gms3).
+test:more(5, gms3, 1000).
+
+c(gms4).
+test:more(5, gms4, 1000).
+
+
+
+
