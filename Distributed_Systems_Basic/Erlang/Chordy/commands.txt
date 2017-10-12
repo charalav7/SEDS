@@ -1,0 +1,40 @@
+erl
+cd("C:/Users/chara/Box Sync/KTH_Software/Distributed Systems_ Basic/erlang/MyHomeWork/HW5_Chordy").
+c(key).
+c(test).
+c(node1).
+c(node2).
+c(test1).
+c(storage).
+
+%% 1st implementation
+test1:run().
+
+%% OR
+N = test:start(node1).
+test:start(node1, 4, N).
+N ! probe.
+
+%% 2nd implementation
+N = node2:start(1).
+M1 = node2:start(10, N).
+M2 = node2:start(5, N).
+M3 = node2:start(3, N).
+
+test:add(4, 10, N).
+test:add(1001, 11, N).
+
+test:lookup(1000, M1).
+test:lookup(1001, M1).
+N ! probe.
+
+%% OR
+N = test:start(node2).
+test:start(node2, 4, N).
+K = test:keys(10).
+test:add(K, N).
+test:check(K, N).
+
+
+
+
